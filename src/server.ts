@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express from 'express';
 import http from 'http';
-import { RTCHandler } from './rtc';
+import { RTCClientHandler } from './rtcClient';
 const app = express();
 const server = http.createServer(app);
 
@@ -19,8 +19,9 @@ server.listen(3000, () => {
 });
 
 
+//const rtcHandler:RTCServerHandler = new RTCServerHandler(server);
 
-const rtcHandler:RTCHandler = new RTCHandler(server);
+const rtcHandler:RTCClientHandler = new RTCClientHandler(server);
 
 
 

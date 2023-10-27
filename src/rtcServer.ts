@@ -2,8 +2,9 @@ import { Server as SocketIoServer } from 'socket.io';
 import { RTCIceCandidate, RTCPeerConnection, RTCSessionDescription } from 'wrtc';
 import { Clients } from "./model/Clients";
 
+/** Handler used to establish a RTC client <--> server <--> client, using the server to send all the information */
 
-export class RTCHandler {
+export class RTCServerHandler {
 	io: SocketIoServer;
 	clients: Clients = {}
 	constructor(server: any) {
