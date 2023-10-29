@@ -12,9 +12,11 @@ app.use(cors({
   credentials: true
 }));
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
 
-
-server.listen(3000, () => {
+server.listen(3000,'0.0.0.0', () => {
   console.log('Servidor escuchando en el puerto 3000');
 });
 
