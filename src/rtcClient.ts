@@ -1,5 +1,5 @@
 import { Server as SocketIoServer } from 'socket.io';
-import { Clients } from "./model/Clients";
+import { Clients } from "./models/Clients";
 
 /** Handler used to establish a RTC client <--> client, using the server to send the initial information to be able to connect later */
 export class RTCClientHandler {
